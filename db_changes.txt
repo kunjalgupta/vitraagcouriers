@@ -1,0 +1,19 @@
+
+-- 26-05-2021-----
+ALTER TABLE `users` ADD `deleted_at` DATETIME NULL DEFAULT NULL AFTER `updated_at`;
+
+
+
+--new table creataed on 26-05-2021
+CREATE TABLE `vitraag`.`user_parent` ( `id` INT(11) NOT NULL AUTO_INCREMENT , `user_id` INT(11) NULL DEFAULT NULL , `parent_id` INT(11) NULL DEFAULT NULL , `created_at` TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP , `updated_at` TIMESTAMP on update CURRENT_TIMESTAMP NULL DEFAULT NULL , `deleted_at` DATETIME NULL DEFAULT NULL , PRIMARY KEY (`id`)) ENGINE = InnoDB;
+
+-- 27-05-2021-----
+ALTER TABLE `address_details`  ADD `pincode` VARCHAR(235) NULL DEFAULT NULL  AFTER `mobile`;
+
+
+///31-05-2021
+ALTER TABLE `daily_courier` ADD `payable_amount` INT(11) NULL DEFAULT NULL AFTER `margin_amount`;
+
+
+ALTER TABLE `courier_tracking`  ADD `other` VARCHAR(255) NULL DEFAULT NULL  AFTER `status`;
+
